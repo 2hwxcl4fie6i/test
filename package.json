@@ -2,6 +2,7 @@
   "name": "web-components-app",
   "version": "1.0.0",
   "description": "Web Components Application with Webpack",
+  "homepage": "https://2hwxcl4fie6i.github.io/test",
   "main": "src/index.js",
   "scripts": {
     "start": "webpack serve --mode development --open",
