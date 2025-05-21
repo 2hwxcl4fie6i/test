@@ -1,0 +1,146 @@
+@import './variables.css';
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    --background-dark: #1e1e1e;
+    --panel-bg: #2d2d2d;
+    --text-color: #ffffff;
+    --grid-color: #3a3a3a;
+    --grid-text: #888;
+    --button-bg: #4CAF50;
+    --button-hover: #45a049;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-dark);
+    min-height: 100vh;
+}
+
+.app-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100vh;
+}
+
+.control-panel {
+    background-color: var(--panel-bg);
+    padding: 15px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.right-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.control-panel button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--button-bg);
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.control-panel button:hover {
+    background-color: var(--button-hover);
+}
+
+.buffer-zone {
+    background-color: var(--panel-bg);
+    min-height: 150px;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.buffer-zone draggable-polygon {
+    cursor: grab;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.buffer-zone draggable-polygon:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.buffer-zone draggable-polygon.dragging {
+    opacity: 0.5;
+}
+
+.buffer-zone draggable-polygon.removing {
+    transform: scale(0);
+    opacity: 0;
+}
+
+work-zone {
+    flex-grow: 1;
+    background-color: var(--panel-bg);
+    border-radius: 4px;
+    --grid-color: #3a3a3a;
+    --grid-text: #888;
+}
+
+.grid-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.grid {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.grid-markers {
+    position: absolute;
+    color: var(--grid-text);
+    font-size: 12px;
+}
+
+.vertical-markers {
+    left: 5px;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.horizontal-markers {
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+} 

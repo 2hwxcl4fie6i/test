@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Components App</title>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Панель управления -->
+        <div class="control-panel">
+            <div class="left-buttons">
+                <custom-button label="Создать"></custom-button>
+            </div>
+            <div class="right-buttons">
+                <custom-button label="Сохранить"></custom-button>
+                <custom-button label="Сбросить"></custom-button>
+            </div>
+        </div>
+
+        <!-- Буферная зона -->
+        <div class="buffer-zone" id="bufferZone"></div>
+
+        <!-- Рабочая зона -->
+        <work-zone></work-zone>
+    </div>
+</body>
+</html> 

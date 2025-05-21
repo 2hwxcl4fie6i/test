@@ -1,0 +1,10 @@
+:root {
+    --color-background: #e0e0e0;
+    --color-text: #000000;
+    --color-border: #ccc;
+    
+    --color-grid: #3a3a3a;
+    
+    --color-button: #c0c0c0;
+    --color-button-hover: #b0b0b0;
+} 
